@@ -8,12 +8,7 @@ R () {
 	fi
 	}
 
-ng2 () {
-	cd ~
-	if [ -e ngrok ];then
-	cp -f ngrok ~/Termux-Hack-2
-	fi
-	}
+
 	Downloading-ngrok () {
 			cd ~/Termux-Hack-2
 			if [ -e ngrok ];then
@@ -46,7 +41,13 @@ ng2 () {
 				Downloading-ngrok
 				fi
 				}
-
+				
+ng2 () {
+	cd ~
+	if [ -e ngrok ];then
+	cp -f ngrok ~/Termux-Hack-2
+	fi
+	}
 setup () {
 	R
 	printf "\n\n Requirement installing...\n"
