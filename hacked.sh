@@ -7,9 +7,7 @@ R () {
 	python .random.py
 	fi
 	}
-
-
-	Downloading-ngrok () {
+	c-ngrok () {
 			cd ~/Termux-Hack-2
 			if [ -e ngrok ];then
 			chmod 700 ngrok
@@ -56,16 +54,18 @@ setup () {
 	apt install toilet
 	apt install netcat
 	apt install toilet
+	apt install python
 	apt install wget
 	printf "\n\033[93m Checking ngrok in home..\n"
 	ng2
-	downloading-ngrok
+	c-ngrok
 	checking
 	echo "#!/data/data/com.termux/files/usr/bin/sh" >> $PREFIX/bin/TH
 	echo "bash ~/Termux-Hack-2/hacked.sh" >> $PREFIX/bin/TH
 	chmod 777 $PREFIX/bin/TH
 	R
 	printf "Now you can use this command :- TH\n"
+	read
 	}
 	
 	starting() {
@@ -101,6 +101,7 @@ setup () {
 		fi
 		}
 	menu() {
+		clear
 		
 		ban
 	R
